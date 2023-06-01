@@ -3,7 +3,7 @@ import { Switch } from 'antd';
 import React, { useEffect, useState } from 'react';
 import { useThemeSwitcher } from 'react-css-theme-switcher';
 
-const initialTheme = window.localStorage.getItem('theme') ?? 'light';
+const initialTheme = window.localStorage.getItem('theme') ?? 'dark';
 export const ThemeSwitcher = () => {
   const [isDarkMode, setIsDarkMode] = useState(initialTheme === 'dark');
   const { switcher, currentTheme, status, themes } = useThemeSwitcher();
