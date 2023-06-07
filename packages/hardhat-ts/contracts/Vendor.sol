@@ -36,7 +36,11 @@ contract Vendor is Ownable {
   }
 
   // ToDo: create a sellTokens() function:
-  function sellTokens() public {}
+  function sellTokens() public payable {
+    // TODO: get the proper amount
+    uint256 theAmount = msg.value;
+    yourToken.transferFrom(msg.sender, address(this), theAmount);
+  }
 }
 
 // TODO: when you're back, deploy new contract, and see the output of the msg.value console log
